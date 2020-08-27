@@ -1,0 +1,93 @@
+// frame
+.animate_frame {
+  position: relative;
+}
+
+.animate_frame::before,
+.animate_frame::after {
+  box-sizing: inherit;
+  position: absolute;
+  content: "";
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.animate_frame::after {
+  bottom: 0;
+  right: 0;
+}
+
+.animate_frame::before {
+  top: 0;
+  left: 0;
+}
+
+.animate_frame:hover::before,
+.animate_frame:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.animate_frame:hover::before {
+  border-top-color: black;
+  border-right-color: black;
+  transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+}
+
+.animate_frame:hover::after {
+  border-bottom-color: black;
+  border-left-color: black;
+  transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s,
+    height 0.3s ease-out 1s;
+}
+// frame
+
+// shakeX
+.animate_shakex {
+  animation-fill-mode: both;
+  animation-duration: 0.8s;
+}
+
+.animate_shakex:hover {
+  animation-name: shakeX;
+}
+
+@keyframes shakeX {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: none;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+// shakeX
+
+// vue-transition組件CSS
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+  transform: translateY(-5px);
+  scroll-behavior: smooth;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+// vue-transition組件CSS

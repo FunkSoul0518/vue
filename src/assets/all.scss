@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/functions";
+//function優先載入
+@import "./helpers/variables";
+//自定義變數
+@import "~bootstrap/scss/bootstrap";
+
+@import "./helpers/custom";
+@import "./helpers/animate";

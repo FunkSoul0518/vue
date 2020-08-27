@@ -1,0 +1,101 @@
+// 背景顏色
+body {
+  background-color: #aa06010d;
+}
+
+/* 字體 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+tr,
+td,
+strong,
+button {
+  font-family: 微軟正黑體;
+  font-weight: bold;
+}
+
+* {
+  list-style: none;
+}
+
+a {
+  transition: all 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+.fz-sm {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  a,
+  h6,
+  p,
+  span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  a,
+  h6 {
+    font-size: 12px;
+  }
+
+  h2,
+  h3 {
+    font-size: 24px;
+  }
+}
+
+/* 字體*/
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.mr-144 {
+  margin-right: 144px;
+}
+
+// hover
+
+// swiper
+.products-card {
+  &:hover {
+    .products-info-img {
+      opacity: 1;
+      background: rgba($black, 0.5);
+      color: $light;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+  .products-info-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+// swiper
+
+//圖片
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+}
